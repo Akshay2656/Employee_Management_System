@@ -226,8 +226,6 @@ public class Main
 						break;
 				
 				case 8: System.out.println("8. Sort by Salary: ");
-						
-						// sort employees by salary 
 						for (int i = 0; i < employees.size(); i++){
 							for(int j = i + 1; j < employees.size(); j++){
 								if (employees.get(i).getSalary() > employees.get(j).getSalary()){
@@ -238,7 +236,6 @@ public class Main
 							}
 						}
 						
-						// Display employees after sorting using foreach loop
 						for(Employee emp : employees){
 							System.out.println(emp);
 							System.out.println("=============================================");
@@ -265,7 +262,7 @@ public class Main
 						break;
 						
 				case 10: System.out.println("10. Count Employees Department-wise: ");
-				
+						
 		
 						
 				case 11: System.exit(0);	
