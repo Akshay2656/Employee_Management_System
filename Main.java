@@ -81,8 +81,7 @@ public class Main
 			System.out.println("7. Group Employee by Department: ");
 			System.out.println("8. Sort by Salary: ");
 			System.out.println("9. Sort by Joining Date: ");
-			System.out.println("10. Count Employees Department-wise: ");
-			System.out.println("11. Exit");
+			System.out.println("10. Exit");
 			
 			System.out.println("Enter Your Choice");
 			int choice = sc.nextInt();	
@@ -215,14 +214,7 @@ public class Main
 							deptMap.get(dept).add(emp);
 						}	
 
-						for (String dept : deptMap.keySet()){
-							System.out.println("Department: "+dept);
-							
-							for (Employee emp : deptMap.get(dept)){
-								System.out.println(emp);
-								System.out.println("=============================================");
-							}
-						}
+						System.out.print(deptMap);
 						break;
 				
 				case 8: System.out.println("8. Sort by Salary: ");
@@ -244,28 +236,10 @@ public class Main
 						break;
 				
 				case 9: System.out.println("9. Sort by Joining Date: ");
-						for (int i = 0 ; i < employees.size(); i++){
-							for (int j = i + 1; j < employees.size(); j++){
-								if (employees.get(i).getJoiningDate().compareTo(employees.get(j).getJoiningDate()) > 0){
-									Employee temp = employees.get(i);
-									employees.set(i, employees.get(j));
-									employees.set(j, temp);		
-								}
-							}
-						}
 								
-						for(Employee emp : employees){
-							System.out.println(emp);
-							System.out.println("=============================================");
-						}
-								
-						break;
+						break;		
 						
-				case 10: System.out.println("10. Count Employees Department-wise: ");
-						
-		
-						
-				case 11: System.exit(0);	
+				case 10: System.exit(0);	
 			}
 		}
 	}
